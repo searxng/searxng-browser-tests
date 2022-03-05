@@ -30,7 +30,7 @@ const config = {
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: 'experimental-allure-playwright',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
@@ -69,10 +69,20 @@ const config = {
     },
 
     {
-      name: 'firefox 1024',
+      name: 'firefox 1920 - he',
       use: {
         ...devices['Desktop Firefox'],
-        viewport: { width: 1024, height: 720 },
+        locale: 'he',
+        viewport: { width: 1920, height: 1080 },
+      },
+    },
+
+    {
+      name: 'firefox 1920 - dark mode',
+      use: {
+        ...devices['Desktop Firefox'],
+        colorScheme: 'dark',
+        viewport: { width: 1920, height: 1080 },
       },
     },
 
