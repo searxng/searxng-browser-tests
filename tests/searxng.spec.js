@@ -2,7 +2,7 @@
 const { test, expect } = require("@playwright/test");
 const { injectAxe, checkA11y, getViolations, reportViolations } = require('axe-playwright');
 
-const BASE_URL = "http://localhost:8080/";
+const BASE_URL = "http://localhost:8888/";
 
 test("preferences", async ({ page }, testInfo) => {
   await page.goto(BASE_URL + "preferences");
