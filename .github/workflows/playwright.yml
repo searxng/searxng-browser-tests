@@ -20,12 +20,14 @@ jobs:
     - name: Install Playwright
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: | 
+        npx playwright test --reporter=line,experimental-allure-playwright
+        npx allure generate ./allure-results --clean
     - name: Commit built files to the playwright-report branch
       if: always()
       uses: s0/git-publish-subdir-action@develop
       env:
         REPO: self
         BRANCH: report
-        FOLDER: playwright-report
+        FOLDER: allure-report
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
