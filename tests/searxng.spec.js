@@ -50,11 +50,14 @@ test("search_images", async ({ page }, testInfo) => {
   const screenshot = await page.screenshot();
   await testInfo.attach("search_images", { body: screenshot, contentType: "image/png"});
 
-  const results = await page.$$("#results article");
-  await results[0].click();
+  const html_js = await page.$$("html.js");
+  if (html_js.length > 0) {
+    const results = await page.$$("#results article");
+    await results[0].click();
 
-  const screenshot_detail = await page.screenshot();
-  await testInfo.attach("search_images_detail", { body: screenshot_detail, contentType: "image/png"});  
+    const screenshot_detail = await page.screenshot();
+    await testInfo.attach("search_images_detail", { body: screenshot_detail, contentType: "image/png"});
+  }
 });
 
 test("search_map", async ({ page }, testInfo) => {
@@ -71,11 +74,14 @@ test("search_map", async ({ page }, testInfo) => {
   const screenshot = await page.screenshot();
   await testInfo.attach("search_map", { body: screenshot, contentType: "image/png"});
 
-  const results = await page.$$("article.result:first-child .searxng_init_map");
-  await results[0].click();
-  // await page.waitForSelector('.leaflet-map-pane');
+  const html_js = await page.$$("html.js");
+  if (html_js.length > 0) {
+    const results = await page.$$("article.result:first-child .searxng_init_map");
+    await results[0].click();
+    // await page.waitForSelector('.leaflet-map-pane');
 
-  const screenshot_detail = await page.screenshot();
-  await testInfo.attach("search_map_detail", { body: screenshot_detail, contentType: "image/png"});
-  await testInfo.attach("search_map_console", { body: JSON.stringify(errorLogs), contentType: "application/json" });  
+    const screenshot_detail = await page.screenshot();
+    await testInfo.attach("search_map_detail", { body: screenshot_detail, contentType: "image/png"});
+    await testInfo.attach("search_map_console", { body: JSON.stringify(errorLogs), contentType: "application/json" });
+  }
 });
