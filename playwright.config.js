@@ -69,10 +69,19 @@ const config = {
     },
 
     {
-      name: 'firefox 1920 - he',
+      name: 'firefox 1920 - rtl',
       use: {
         ...devices['Desktop Firefox'],
         locale: 'he',
+        viewport: { width: 1920, height: 1080 },
+      },
+    },
+
+    {
+      name: 'firefox 1920 - no js',
+      use: {
+        ...devices['Desktop Firefox'],
+        javaScriptEnabled: false,
         viewport: { width: 1920, height: 1080 },
       },
     },
