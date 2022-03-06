@@ -22,6 +22,8 @@ jobs:
       run: | 
         npx playwright test --reporter=line,experimental-allure-playwright
         npx allure generate ./allure-results --clean
+        node attachment_browser/create_json.js
+        cp attachment_browser/attachment_browser.html allure-report
     - name: Commit built files to the playwright-report branch
       if: always()
       uses: s0/git-publish-subdir-action@develop

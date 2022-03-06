@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+        }
+    
+        nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: rgb(233, 233, 233);
+            box-shadow: 0 2px 2px -1px #666;
+        }
+
+        nav > * {
+            width: 20rem;
+            display: block;
+            margin: 0 1rem;
+        }
+
+        main {
+            margin: 1rem 0 0 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main img {
+            margin: 0 auto;
+            max-width: 100%;
+            outline: 1px solid black;
+            margin: 0 0 1rem 0;
+        }
+    </style>
+    <title>Attachment browser</title>
+</head>
+<body x-data="{data: {all_attachments: [], config_list:[], test_case_list:[]}, selected_config: '', selected_test_case: ''}" x-init="data = await fetch_data()">
+    <nav>
+        <select name="selected_config" x-model="selected_config">
+            <template x-for="config in data.config_list">
+                <option x-text="config"></option>
+            </template>
+        </select>
+        <select name="selected_test_case" x-model="selected_test_case">
+            <template x-for="test_case in data.test_case_list">
+                <option x-text="test_case"></option>
+            </template>
+        </select>
+    </nav>
+    <main>
+        <template x-for="attachments in data.all_attachments">
+            <template x-if="attachments.config === selected_config && attachments.test_case === selected_test_case">
+                <template x-for="one_attachment in attachments.attachments">
+                    <img x-bind:src="'data/attachments/' + one_attachment.source"></img>
+                </template>
+            </template>
+        </template>
+    </main>
+    <script>
+        async function fetch_data() {
+            const response = await fetch('data/all_attachments.json');
+            const raw_data = await response.json();
+            const config_list = [''];
+            const test_case_list = [''];
+            const all_attachments = [];
+            for(const attachments of raw_data) {
+                all_attachments.push(attachments);
+                if (!config_list.includes(attachments.config)) {
+                    config_list.push(attachments.config);
+                }
+                if (!test_case_list.includes(attachments.test_case)) {
+                    test_case_list.push(attachments.test_case);
+                }
+            }
+            let result = {
+                all_attachments: all_attachments,
+                config_list: config_list,
+                test_case_list: test_case_list,
+            };
+            console.log(result);
+            return result;
+        }
+    </script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+</html>
