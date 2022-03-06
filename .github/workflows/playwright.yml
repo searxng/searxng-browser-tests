@@ -21,6 +21,9 @@ jobs:
     - name: Run Playwright tests
       run: | 
         npx playwright test --reporter=line,experimental-allure-playwright
+    - name: Generate report
+      if: always()
+      run: |
         npx allure generate ./allure-results --clean
         node attachment_browser/create_json.js
         cp attachment_browser/attachment_browser.html allure-report
