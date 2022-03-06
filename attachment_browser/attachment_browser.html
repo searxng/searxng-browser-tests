@@ -32,6 +32,11 @@
             margin: 0 1rem;
         }
 
+        nav select:focus {
+            outline: none;
+            box-shadow: blue 0 0 3px;
+        }
+
         nav .external_links {
             position: absolute;
             right: 1rem;
@@ -40,7 +45,7 @@
 
         main {
             margin: 1rem 0 0 0;
-            padding: 4rem 0 0 0;
+            padding: 4rem 0 100vh 0;
             display: flex;
             flex-direction: column;
             object-fit: contain;
@@ -61,12 +66,12 @@
     </style>
     <title>Attachment browser</title>
 </head>
-<body x-data="{data: {all_attachments: [], config_list:[], test_case_list:[]}, selected_config: '', selected_test_case: ''}" x-init="data = await fetch_data()">
+<body x-data="fetch_data()" x-init="init()">
     <nav>
         <div>
             <label for="selected_config">Browser</label>
             <select id="selected_config" x-model="selected_config">
-                <template x-for="config in data.config_list">
+                <template x-for="config in config_list">
                     <option x-text="config"></option>
                 </template>
             </select>
@@ -74,7 +79,7 @@
         <div>
             <label for="selected_test_case">Test case</label>
             <select name="selected_test_case" x-model="selected_test_case">
-                <template x-for="test_case in data.test_case_list">
+                <template x-for="test_case in test_case_list">
                     <option x-text="test_case"></option>
                 </template>
             </select>
@@ -84,59 +89,69 @@
         </div>
     </nav>
     <main>
-        <template x-for="attachments in data.all_attachments">
+        <template x-for="attachments in all_attachments">
             <template x-if="attachments.config === selected_config && attachments.test_case === selected_test_case">
                 <template x-for="one_attachment in attachments.attachments">
-                    <div class="imgcontainer">
-                        <img x-bind:src="'data/attachments/' + one_attachment.source"></img>
-                    </div>
+                    <template x-if="one_attachment.type === 'image/png'">
+                        <div class="imgcontainer">
+                            <img x-bind:src="'data/attachments/' + one_attachment.source"></img>
+                        </div>
+                    </template>
                 </template>
             </template>
         </template>
     </main>
     <script>
         const default_config_order = [
-            '',
             'firefox 1024', 'firefox 1280', 'firefox 1920', 'chromium 1920', 'webkit 1920', 'firefox 1920 - rtl',
             'firefox 1920 - no js', 'firefox 1920 - dark mode'
         ];
 
-        async function fetch_data() {
-            const response = await fetch('data/all_attachments.json');
-            const raw_data = await response.json();
-            const config_list = [''];
-            const test_case_list = [''];
-            const all_attachments = [];
-            for(const attachments of raw_data) {
-                all_attachments.push(attachments);
-                if (!config_list.includes(attachments.config)) {
-                    config_list.push(attachments.config);
+        function fetch_data() {
+            async function init() {
+                const response = await fetch('data/all_attachments.json');
+                const raw_data = await response.json();
+                const config_list = [];
+                const test_case_list = [];
+                const all_attachments = [];
+                for(const attachments of raw_data) {
+                    all_attachments.push(attachments);
+                    if (!config_list.includes(attachments.config)) {
+                        config_list.push(attachments.config);
+                    }
+                    if (!test_case_list.includes(attachments.test_case)) {
+                        test_case_list.push(attachments.test_case);
+                    }
                 }
-                if (!test_case_list.includes(attachments.test_case)) {
-                    test_case_list.push(attachments.test_case);
-                }
+                test_case_list.sort();
+                config_list.sort(function (a,b){
+                    const ia = default_config_order.indexOf(a);
+                    const ib = default_config_order.indexOf(b);
+                    if (ia === -1 && ib === -1) {
+                        return a < b;
+                    }
+                    if (ia === -1) {
+                        return 1;
+                    }
+                    if (ib === -1) {
+                        return -1;
+                    }
+                    return ia - ib;
+                });
+                this.all_attachments = all_attachments;
+                this.config_list = config_list;
+                this.test_case_list = test_case_list;
+                this.selected_config = 'firefox 1920';
+                this.selected_test_case = test_case_list[0];
             }
-            test_case_list.sort();
-            config_list.sort(function (a,b){
-                const ia = default_config_order.indexOf(a);
-                const ib = default_config_order.indexOf(b);
-                if (ia === -1 && ib === -1) {
-                    return a < b;
-                }
-                if (ia === -1) {
-                    return 1;
-                }
-                if (ib === -1) {
-                    return -1;
-                }
-                return ia - ib;
-            });
-            let result = {
-                all_attachments: all_attachments,
-                config_list: config_list,
-                test_case_list: test_case_list,
+            return {
+                all_attachments: [],
+                config_list: [],
+                test_case_list: [],
+                selected_config: '',
+                selected_test_case: '',
+                init: init,
             };
-            return result;
         }
     </script>
     <script src="//unpkg.com/alpinejs" defer></script>
