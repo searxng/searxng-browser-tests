@@ -8,9 +8,14 @@
         body {
             margin: 0;
             background-color: white;
+            font-family: sans-serif;
         }
     
         nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -27,44 +32,75 @@
             margin: 0 1rem;
         }
 
-        main {
-            margin: 1rem 0 0 0;
-            display: flex;
-            flex-direction: column;
+        nav .external_links {
+            position: absolute;
+            right: 1rem;
+            width: auto;
         }
 
-        main img {
+        main {
+            margin: 1rem 0 0 0;
+            padding: 4rem 0 0 0;
+            display: flex;
+            flex-direction: column;
+            object-fit: contain;
+        }
+
+        main .imgcontainer {
+            display: flex;
+            min-height: calc(100vh - 6rem);
+            max-height: calc(100vh - 6rem);
+            width: 100%;
+            margin: 0 auto 1rem auto;
+        }
+
+        main .imgcontainer img {
             margin: 0 auto;
-            max-width: 100%;
             outline: 1px solid black;
-            margin: 0 0 1rem 0;
         }
     </style>
     <title>Attachment browser</title>
 </head>
 <body x-data="{data: {all_attachments: [], config_list:[], test_case_list:[]}, selected_config: '', selected_test_case: ''}" x-init="data = await fetch_data()">
     <nav>
-        <select name="selected_config" x-model="selected_config">
-            <template x-for="config in data.config_list">
-                <option x-text="config"></option>
-            </template>
-        </select>
-        <select name="selected_test_case" x-model="selected_test_case">
-            <template x-for="test_case in data.test_case_list">
-                <option x-text="test_case"></option>
-            </template>
-        </select>
+        <div>
+            <label for="selected_config">Browser</label>
+            <select id="selected_config" x-model="selected_config">
+                <template x-for="config in data.config_list">
+                    <option x-text="config"></option>
+                </template>
+            </select>
+        </div>
+        <div>
+            <label for="selected_test_case">Test case</label>
+            <select name="selected_test_case" x-model="selected_test_case">
+                <template x-for="test_case in data.test_case_list">
+                    <option x-text="test_case"></option>
+                </template>
+            </select>
+        </div>
+        <div class="external_links">
+            <a href="https://github.com/searxng/searxng-browser-tests">Source code</a>
+        </div>
     </nav>
     <main>
         <template x-for="attachments in data.all_attachments">
             <template x-if="attachments.config === selected_config && attachments.test_case === selected_test_case">
                 <template x-for="one_attachment in attachments.attachments">
-                    <img x-bind:src="'data/attachments/' + one_attachment.source"></img>
+                    <div class="imgcontainer">
+                        <img x-bind:src="'data/attachments/' + one_attachment.source"></img>
+                    </div>
                 </template>
             </template>
         </template>
     </main>
     <script>
+        const default_config_order = [
+            '',
+            'firefox 1024', 'firefox 1280', 'firefox 1920', 'chromium 1920', 'webkit 1920', 'firefox 1920 - rtl',
+            'firefox 1920 - no js', 'firefox 1920 - dark mode'
+        ];
+
         async function fetch_data() {
             const response = await fetch('data/all_attachments.json');
             const raw_data = await response.json();
@@ -80,12 +116,26 @@
                     test_case_list.push(attachments.test_case);
                 }
             }
+            test_case_list.sort();
+            config_list.sort(function (a,b){
+                const ia = default_config_order.indexOf(a);
+                const ib = default_config_order.indexOf(b);
+                if (ia === -1 && ib === -1) {
+                    return a < b;
+                }
+                if (ia === -1) {
+                    return 1;
+                }
+                if (ib === -1) {
+                    return -1;
+                }
+                return ia - ib;
+            });
             let result = {
                 all_attachments: all_attachments,
                 config_list: config_list,
                 test_case_list: test_case_list,
             };
-            console.log(result);
             return result;
         }
     </script>
