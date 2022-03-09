@@ -11,7 +11,7 @@ The tests can run locally
 ### Install
 
 ```sh
-npx playwright install --with-deps
+npm run install
 ```
 
 ### Usage
@@ -19,7 +19,7 @@ npx playwright install --with-deps
 The tests expect an SearXNG instance at `http://localhost:8888`.
 
 ```sh
-npx playwright test --reporter=line,experimental-allure-playwright
-npx allure generate ./allure-results --clean
+npm run test
+npm run report
 npx allure open ./allure-report
 ```

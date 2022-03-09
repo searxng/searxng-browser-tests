@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "install": "npx playwright install --with-deps",
+    "test": "npx playwright test --reporter=line,experimental-allure-playwright",
+    "report": "npx allure generate ./allure-results --clean; node attachment_browser/create_json.js; cp attachment_browser/attachment_browser.html allure-report"
+  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "SearXNG team",
+  "license": "AGPL3",
   "devDependencies": {
     "@playwright/test": "^1.19.2",
     "allure-commandline": "^2.17.2",
