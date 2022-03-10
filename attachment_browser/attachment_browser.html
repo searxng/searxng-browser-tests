@@ -44,17 +44,14 @@
         }
 
         main {
-            margin: 1rem 0 0 0;
             padding: 4rem 0 100vh 0;
-            display: flex;
-            flex-direction: column;
+            display: grid;
             object-fit: contain;
         }
 
         main .imgcontainer {
             display: flex;
-            min-height: calc(100vh - 6rem);
-            max-height: calc(100vh - 6rem);
+            height: calc(100vh - 5rem);
             width: 100%;
             margin: 0 auto 1rem auto;
         }
@@ -62,6 +59,20 @@
         main .imgcontainer img {
             margin: 0 auto;
             outline: 1px solid black;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: calc(100vh - 5rem);
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+            body main .imgcontainer {
+                height: auto;
+            }
+
+            body main .imgcontainer img {
+                max-height: auto;
+            }
         }
     </style>
     <title>Attachment browser</title>
@@ -70,7 +81,7 @@
     <nav>
         <div>
             <label for="selected_config">Browser</label>
-            <select id="selected_config" x-model="selected_config">
+            <select id="selected_config" x-model="selected_config" @change="update_hash($data)">
                 <template x-for="config in config_list">
                     <option x-text="config"></option>
                 </template>
@@ -78,7 +89,7 @@
         </div>
         <div>
             <label for="selected_test_case">Test case</label>
-            <select name="selected_test_case" x-model="selected_test_case">
+            <select name="selected_test_case" x-model="selected_test_case" @change="update_hash($data)">
                 <template x-for="test_case in test_case_list">
                     <option x-text="test_case"></option>
                 </template>
@@ -107,7 +118,32 @@
             'firefox 1920 - no js', 'firefox 1920 - dark mode'
         ];
 
+        const default_config = 'firefox 1920';
+        const default_test_case = 'index';
+
+        function update_hash(data) {
+            location.hash = new URLSearchParams({
+                config: data.selected_config,
+                test_case: data.selected_test_case,
+            }).toString();
+        }
+
         function fetch_data() {
+
+            function update_selection_from_hash() {
+                const params = new URLSearchParams(location.hash.substring(1));
+                if (params.get('config')) {
+                    this.selected_config = params.get('config');
+                } else {
+                    this.selected_config = default_config;
+                }
+                if (params.get('test_case')) {
+                    this.selected_test_case = params.get('test_case');
+                } else {
+                    this.selected_test_case = default_test_case;
+                }
+            }
+
             async function init() {
                 const response = await fetch('data/all_attachments.json');
                 const raw_data = await response.json();
@@ -141,8 +177,10 @@
                 this.all_attachments = all_attachments;
                 this.config_list = config_list;
                 this.test_case_list = test_case_list;
-                this.selected_config = 'firefox 1920';
-                this.selected_test_case = test_case_list[0];
+
+                const usfh = update_selection_from_hash.bind(this);    
+                usfh();
+                window.onhashchange = usfh;
             }
             return {
                 all_attachments: [],
