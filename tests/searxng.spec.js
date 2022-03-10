@@ -22,6 +22,20 @@ test("index", async ({ page }, testInfo) => {
   await page.goto(BASE_URL);
   const screenshot = await page.screenshot();
   await testInfo.attach("index", { body: screenshot, contentType: "image/png"});
+
+  const html_js = await page.$$("html.js");
+  if (html_js.length > 0) {
+    // await page.fill('input#q', 'time');
+    await page.focus('input#q');
+    await page.keyboard.insertText('time');
+    await page.waitForTimeout(3000);
+    /*
+    await page.waitForSelector('.autocomplete > ul > li');
+    */
+    const screenshot = await page.screenshot();
+    await testInfo.attach("index_autocomplete", { body: screenshot, contentType: "image/png"});
+  }
+
   /*
   await injectAxe();
   await checkA11y(page, null, {
@@ -41,6 +55,14 @@ test("search_general", async ({ page }, testInfo) => {
 
   const screenshot = await page.screenshot();
   await testInfo.attach("search_general", { body: screenshot, contentType: "image/png"});
+
+  const html_js = await page.$$("html.js");
+  if (html_js.length > 0) {
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+
+    const screenshot = await page.screenshot();
+    await testInfo.attach("search_general_2", { body: screenshot, contentType: "image/png"});
+  }
 });
 
 test("search_images", async ({ page }, testInfo) => {
@@ -57,6 +79,24 @@ test("search_images", async ({ page }, testInfo) => {
 
     const screenshot_detail = await page.screenshot();
     await testInfo.attach("search_images_detail", { body: screenshot_detail, contentType: "image/png"});
+  }
+});
+
+test("search_videos", async ({ page }, testInfo) => {
+  await page.goto(BASE_URL + "search?q=3blue1brown&categories=videos");
+  await page.waitForLoadState('networkidle');
+
+  const screenshot = await page.screenshot();
+  await testInfo.attach("search_videos", { body: screenshot, contentType: "image/png"});
+
+  const html_js = await page.$$("html.js");
+  if (html_js.length > 0) {
+    const results = await page.$$("#results article a.media-loader");
+    await results[0].click();
+    await page.waitForTimeout(3000);
+
+    const screenshot_detail = await page.screenshot();
+    await testInfo.attach("search_videos_player", { body: screenshot_detail, contentType: "image/png"});
   }
 });
 
@@ -78,10 +118,18 @@ test("search_map", async ({ page }, testInfo) => {
   if (html_js.length > 0) {
     const results = await page.$$("article.result:first-child .searxng_init_map");
     await results[0].click();
+    await page.waitForTimeout(3000);
     // await page.waitForSelector('.leaflet-map-pane');
 
     const screenshot_detail = await page.screenshot();
     await testInfo.attach("search_map_detail", { body: screenshot_detail, contentType: "image/png"});
     await testInfo.attach("search_map_console", { body: JSON.stringify(errorLogs), contentType: "application/json" });
   }
+});
+
+test("about", async ({ page }, testInfo) => {
+  await page.goto(BASE_URL + "about");
+
+  const screenshot = await page.screenshot();
+  await testInfo.attach("about", { body: screenshot, contentType: "image/png"});
 });
