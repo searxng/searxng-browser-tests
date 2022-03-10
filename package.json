@@ -6,7 +6,7 @@
   "scripts": {
     "install": "npx playwright install --with-deps",
     "test": "npx playwright test --reporter=line,experimental-allure-playwright",
-    "report": "npx allure generate ./allure-results --clean; node attachment_browser/create_json.js; cp attachment_browser/attachment_browser.html allure-report"
+    "report": "npx allure generate ./allure-results --clean; node screenshots/create_json.js; cp screenshots/screenshots.html allure-report"
   },
   "keywords": [],
   "author": "SearXNG team",
