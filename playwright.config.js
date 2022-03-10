@@ -28,7 +28,7 @@ const config = {
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 2,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'experimental-allure-playwright',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -45,15 +45,16 @@ const config = {
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium 1920',
+      name: 'Chromium 1920',
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1920, height: 1080 },
+        forcedColors: 'active',
       },
     },
 
     {
-      name: 'firefox 1920',
+      name: 'Firefox 1920',
       use: {
         ...devices['Desktop Firefox'],
         viewport: { width: 1920, height: 1080 },
@@ -61,15 +62,23 @@ const config = {
     },
 
     {
-      name: 'firefox 1280',
+      name: 'Firefox 1280',
       use: {
         ...devices['Desktop Firefox'],
-        viewport: { width: 1280, height: 720 },
+        viewport: { width: 1280, height: 960 },
       },
     },
 
     {
-      name: 'firefox 1920 - rtl',
+      name: 'Firefox 1024',
+      use: {
+        ...devices['Desktop Firefox'],
+        viewport: { width: 1024, height: 768 },
+      },
+    },
+
+    {
+      name: 'Firefox 1920 - rtl',
       use: {
         ...devices['Desktop Firefox'],
         locale: 'he',
@@ -78,7 +87,7 @@ const config = {
     },
 
     {
-      name: 'firefox 1920 - no js',
+      name: 'Firefox 1920 - no js',
       use: {
         ...devices['Desktop Firefox'],
         javaScriptEnabled: false,
@@ -87,7 +96,7 @@ const config = {
     },
 
     {
-      name: 'firefox 1920 - dark mode',
+      name: 'Firefox 1920 - dark mode',
       use: {
         ...devices['Desktop Firefox'],
         colorScheme: 'dark',
@@ -96,7 +105,18 @@ const config = {
     },
 
     {
-      name: 'webkit 1920',
+      name: 'Chrome 1920 - high contrast',
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1920, height: 1080 },
+        contextOptions: {
+          forcedColors: 'active',
+        },
+      },
+    },
+
+    {
+      name: 'Webkit 1920',
       use: {
         ...devices['Desktop Safari'],
         viewport: { width: 1920, height: 1080 },
