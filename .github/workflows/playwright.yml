@@ -22,7 +22,9 @@ jobs:
       run: npm run test
     - name: Generate report
       if: always()
-      run: npm run report
+      run: |
+        npm run report
+        echo "dev.searxng.org" > allure-report/CNAME
     - name: Commit built files to the playwright-report branch
       if: always()
       uses: s0/git-publish-subdir-action@develop
