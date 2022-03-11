@@ -75,7 +75,7 @@
             }
         }
     </style>
-    <title>Attachment browser</title>
+    <title>Screenshots</title>
 </head>
 <body x-data="fetch_data()" x-init="init()">
     <nav>
@@ -124,10 +124,12 @@
         const default_test_case = 'search_general';
 
         function update_hash(data) {
-            location.hash = new URLSearchParams({
+            const new_hash = '#' + new URLSearchParams({
                 config: data.selected_config,
                 test_case: data.selected_test_case,
             }).toString();
+            history.replaceState(null, null, new_hash);
+            document.title =  'Screenshots - ' + data.selected_config + ' - ' + data.selected_test_case;
         }
 
         function fetch_data() {
@@ -183,6 +185,7 @@
                 const usfh = update_selection_from_hash.bind(this);    
                 usfh();
                 window.onhashchange = usfh;
+                update_hash(this);
             }
             return {
                 all_attachments: [],
