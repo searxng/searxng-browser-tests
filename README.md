@@ -1,8 +1,8 @@
 Use [playwright](https://github.com/microsoft/playwright) to render the SearXNG pages in various configurations.
 
 A weekly report is available at:
-* [full report](https://searxng.org/searxng-browser-tests/).
-* [screenshots](https://searxng.org/searxng-browser-tests/screenshots.html).
+* [full report](https://dev.searxng.org/).
+* [screenshots](https://dev.searxng.org/screenshots.html).
 
 ## Local installation
 
