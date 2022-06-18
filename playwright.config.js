@@ -86,6 +86,33 @@ const config = {
     },
 
     {
+      name: 'Firefox 1024 - centered - rtl',
+      use: {
+        ...devices['Desktop Firefox'],
+        locale: 'he',
+        extraHTTPHeaders: { "Cookie": "center_aligment=1" },
+        viewport: { width: 1024, height: 768 },
+      },
+    },
+
+    {
+      name: 'Mobile Chrome - centered',
+      use: {
+        ...devices['Pixel 5'],
+        extraHTTPHeaders: { "Cookie": "center_aligment=1" },
+      },
+    },
+
+    {
+      name: 'Mobile Chrome - centered - rtl',
+      use: {
+        ...devices['Pixel 5'],
+        locale: 'he',
+        extraHTTPHeaders: { "Cookie": "center_aligment=1" },
+      },
+    },
+
+    {
       name: 'Firefox 1920 - rtl',
       use: {
         ...devices['Desktop Firefox'],
