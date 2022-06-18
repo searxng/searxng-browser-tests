@@ -49,7 +49,6 @@ const config = {
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1920, height: 1080 },
-        forcedColors: 'active',
       },
     },
 
@@ -73,6 +72,15 @@ const config = {
       name: 'Firefox 1024',
       use: {
         ...devices['Desktop Firefox'],
+        viewport: { width: 1024, height: 768 },
+      },
+    },
+
+    {
+      name: 'Firefox 1024 - centered',
+      use: {
+        ...devices['Desktop Firefox'],
+        extraHTTPHeaders: { "Cookie": "center_aligment=1" },
         viewport: { width: 1024, height: 768 },
       },
     },
