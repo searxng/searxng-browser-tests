@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const file_names = ['alpinejs.js', 'robots.txt', 'screenshots.html', 'sitemap.xml'];
+const file_names = ['alpinejs.js', 'robots.txt', 'screenshots.html', 'sitemap.xml', 'favicon.png'];
 
 
 function read_json_file(file_name) {

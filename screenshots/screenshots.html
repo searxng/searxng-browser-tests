@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SearXNG - Screenshots</title>
+    <link rel="icon" href="favicon.png" sizes="any">
+    <meta name="description" content="Screenshots of SearXNG, weekly updated">
+    <script type='application/ld+json'> 
+        {
+          "@context": "http://www.schema.org",
+          "@type": "WebSite",
+          "name": "SearXNG - Screenshots",
+          "url": "https://dev.searxng.org/screenshots.html"
+        }
+    </script>
     <style>
         body {
             margin: 0;
@@ -75,7 +85,6 @@
             }
         }
     </style>
-    <title>Screenshots</title>
 </head>
 <body x-data="fetch_data()" x-init="init()">
     <nav>
@@ -118,6 +127,7 @@
             'Chromium 1920', 'Webkit 1920',
             'Firefox 1920 - rtl', 'Firefox 1920 - no js', 'Firefox 1920 - dark mode', 'Chrome 1920 - high contrast',
             'Mobile Chrome', 'Mobile Safari',
+            'Firefox 1024 - centered', 'Firefox 1024 - centered - rtl', 'Mobile Chrome - centered', 'Mobile Chrome - centered - rtl',
         ];
 
         const default_config = 'Firefox 1920';
@@ -129,7 +139,7 @@
                 test_case: data.selected_test_case,
             }).toString();
             history.replaceState(null, null, new_hash);
-            document.title =  'Screenshots - ' + data.selected_config + ' - ' + data.selected_test_case;
+            document.title =  'SearXNG - Screenshots - ' + data.selected_config + ' - ' + data.selected_test_case;
         }
 
         function fetch_data() {
