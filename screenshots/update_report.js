@@ -23,8 +23,10 @@ for(let config of suites.children) {
                 attachments: []
             }
             const test_case_data = read_json_file('allure-report/data/test-cases/' + test_case.uid + '.json');
-            for(let attachment of test_case_data.testStage.attachments) {
-                c.attachments.push(attachment);
+            if (test_case_data.testStage !== undefined) {
+                for(let attachment of test_case_data.testStage.attachments) {
+                    c.attachments.push(attachment);
+                }
             }
             all_attachments.push(c);
         }
