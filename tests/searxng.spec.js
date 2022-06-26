@@ -127,6 +127,14 @@ test("search_map", async ({ page }, testInfo) => {
   }
 });
 
+test("search_code", async ({ page }, testInfo) => {
+  await page.goto(BASE_URL + "search?q=!scc%20grep");
+  await page.waitForLoadState('networkidle');
+
+  const screenshot = await page.screenshot();
+  await testInfo.attach("search_code", { body: screenshot, contentType: "image/png"});
+});
+
 test("about", async ({ page }, testInfo) => {
   await page.goto(BASE_URL + "about");
 
