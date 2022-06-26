@@ -7,6 +7,9 @@ const { devices } = require('@playwright/test');
  */
 // require('dotenv').config();
 
+const COOKIES = "autocomplete=google";
+const HEADERS = { "Cookie": COOKIES };
+
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -48,6 +51,7 @@ const config = {
       name: 'Chromium 1920',
       use: {
         ...devices['Desktop Chrome'],
+        extraHTTPHeaders: HEADERS,
         viewport: { width: 1920, height: 1080 },
       },
     },
@@ -56,6 +60,7 @@ const config = {
       name: 'Firefox 1920',
       use: {
         ...devices['Desktop Firefox'],
+        extraHTTPHeaders: HEADERS,
         viewport: { width: 1920, height: 1080 },
       },
     },
@@ -64,6 +69,7 @@ const config = {
       name: 'Firefox 1280',
       use: {
         ...devices['Desktop Firefox'],
+        extraHTTPHeaders: HEADERS,
         viewport: { width: 1280, height: 960 },
       },
     },
@@ -72,6 +78,7 @@ const config = {
       name: 'Firefox 1024',
       use: {
         ...devices['Desktop Firefox'],
+        extraHTTPHeaders: HEADERS,
         viewport: { width: 1024, height: 768 },
       },
     },
@@ -80,7 +87,7 @@ const config = {
       name: 'Firefox 1024 - centered',
       use: {
         ...devices['Desktop Firefox'],
-        extraHTTPHeaders: { "Cookie": "center_aligment=1" },
+        extraHTTPHeaders: { "Cookie": "center_aligment=1; " + COOKIES },
         viewport: { width: 1024, height: 768 },
       },
     },
@@ -90,7 +97,7 @@ const config = {
       use: {
         ...devices['Desktop Firefox'],
         locale: 'he',
-        extraHTTPHeaders: { "Cookie": "center_aligment=1" },
+        extraHTTPHeaders: { "Cookie": "center_aligment=1; " + COOKIES },
         viewport: { width: 1024, height: 768 },
       },
     },
@@ -99,7 +106,7 @@ const config = {
       name: 'Mobile Chrome - centered',
       use: {
         ...devices['Pixel 5'],
-        extraHTTPHeaders: { "Cookie": "center_aligment=1" },
+        extraHTTPHeaders: { "Cookie": "center_aligment=1; " + COOKIES },
       },
     },
 
@@ -108,7 +115,7 @@ const config = {
       use: {
         ...devices['Pixel 5'],
         locale: 'he',
-        extraHTTPHeaders: { "Cookie": "center_aligment=1" },
+        extraHTTPHeaders: { "Cookie": "center_aligment=1; " + COOKIES },
       },
     },
 
@@ -116,6 +123,7 @@ const config = {
       name: 'Firefox 1920 - rtl',
       use: {
         ...devices['Desktop Firefox'],
+        extraHTTPHeaders: HEADERS,
         locale: 'he',
         viewport: { width: 1920, height: 1080 },
       },
@@ -125,6 +133,7 @@ const config = {
       name: 'Firefox 1920 - no js',
       use: {
         ...devices['Desktop Firefox'],
+        extraHTTPHeaders: HEADERS,
         javaScriptEnabled: false,
         viewport: { width: 1920, height: 1080 },
       },
@@ -134,6 +143,7 @@ const config = {
       name: 'Firefox 1920 - dark mode',
       use: {
         ...devices['Desktop Firefox'],
+        extraHTTPHeaders: HEADERS,
         colorScheme: 'dark',
         viewport: { width: 1920, height: 1080 },
       },
@@ -143,6 +153,7 @@ const config = {
       name: 'Chrome 1920 - high contrast',
       use: {
         ...devices['Desktop Chrome'],
+        extraHTTPHeaders: HEADERS,
         viewport: { width: 1920, height: 1080 },
         contextOptions: {
           forcedColors: 'active',
@@ -154,6 +165,7 @@ const config = {
       name: 'Webkit 1920',
       use: {
         ...devices['Desktop Safari'],
+        extraHTTPHeaders: HEADERS,
         viewport: { width: 1920, height: 1080 },
       },
     },
@@ -163,12 +175,14 @@ const config = {
       name: 'Mobile Chrome',
       use: {
         ...devices['Pixel 5'],
+        extraHTTPHeaders: HEADERS,
       },
     },
     {
       name: 'Mobile Safari',
       use: {
         ...devices['iPhone 12'],
+        extraHTTPHeaders: HEADERS,
       },
     },
 
