@@ -1,0 +1,76 @@
+{
+  "uid" : "d91ea237e1907cea",
+  "name" : "search_map",
+  "fullName" : "search_map",
+  "historyId" : "Mobile Chrome - centered - rtl searxng.spec.js search_map",
+  "time" : {
+    "start" : 1659073254517,
+    "stop" : 1659073260274,
+    "duration" : 5757
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "6d01adb382f4e521",
+      "name" : "search_map",
+      "source" : "6d01adb382f4e521.png",
+      "type" : "image/png",
+      "size" : 414290
+    }, {
+      "uid" : "a9fa66a57cdd9f5a",
+      "name" : "search_map_detail",
+      "source" : "a9fa66a57cdd9f5a.png",
+      "type" : "image/png",
+      "size" : 1380510
+    }, {
+      "uid" : "17a642d810a777f5",
+      "name" : "search_map_console",
+      "source" : "17a642d810a777f5.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Mobile Chrome - centered - rtl"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d91ea237e1907cea.json",
+  "parameterValues" : [ ]
+}

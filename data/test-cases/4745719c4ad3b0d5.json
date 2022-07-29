@@ -1,0 +1,70 @@
+{
+  "uid" : "4745719c4ad3b0d5",
+  "name" : "about",
+  "fullName" : "about",
+  "historyId" : "Mobile Chrome - centered - rtl searxng.spec.js about",
+  "time" : {
+    "start" : 1659073261690,
+    "stop" : 1659073262039,
+    "duration" : 349
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2eeb388f500e7d0e",
+      "name" : "about",
+      "source" : "2eeb388f500e7d0e.png",
+      "type" : "image/png",
+      "size" : 155689
+    }, {
+      "uid" : "53fea2a8dddd9dbb",
+      "name" : "about_console",
+      "source" : "53fea2a8dddd9dbb.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Mobile Chrome - centered - rtl"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4745719c4ad3b0d5.json",
+  "parameterValues" : [ ]
+}

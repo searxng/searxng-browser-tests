@@ -1,0 +1,70 @@
+{
+  "uid" : "e3ccc16a3b7d3e6e",
+  "name" : "about",
+  "fullName" : "about",
+  "historyId" : "Firefox 1024 - centered - rtl searxng.spec.js about",
+  "time" : {
+    "start" : 1659073202644,
+    "stop" : 1659073203146,
+    "duration" : 502
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ebc090633e9c9f8d",
+      "name" : "about",
+      "source" : "ebc090633e9c9f8d.png",
+      "type" : "image/png",
+      "size" : 162502
+    }, {
+      "uid" : "2c40d5b3a9681f46",
+      "name" : "about_console",
+      "source" : "2c40d5b3a9681f46.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Firefox 1024 - centered - rtl"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e3ccc16a3b7d3e6e.json",
+  "parameterValues" : [ ]
+}

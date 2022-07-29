@@ -1,0 +1,70 @@
+{
+  "uid" : "81d622e9003d29b1",
+  "name" : "search_code",
+  "fullName" : "search_code",
+  "historyId" : "Chrome 1920 - high contrast searxng.spec.js search_code",
+  "time" : {
+    "start" : 1659073364110,
+    "stop" : 1659073365428,
+    "duration" : 1318
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "908d40ec44bf8815",
+      "name" : "search_code",
+      "source" : "908d40ec44bf8815.png",
+      "type" : "image/png",
+      "size" : 222666
+    }, {
+      "uid" : "12776bc33859b51d",
+      "name" : "search_code_console",
+      "source" : "12776bc33859b51d.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Chrome 1920 - high contrast"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "81d622e9003d29b1.json",
+  "parameterValues" : [ ]
+}

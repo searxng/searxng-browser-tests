@@ -1,0 +1,76 @@
+{
+  "uid" : "ac090afc747d4b6e",
+  "name" : "search_map",
+  "fullName" : "search_map",
+  "historyId" : "Mobile Chrome searxng.spec.js search_map",
+  "time" : {
+    "start" : 1659073426671,
+    "stop" : 1659073432182,
+    "duration" : 5511
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "69061b03cc8994f7",
+      "name" : "search_map",
+      "source" : "69061b03cc8994f7.png",
+      "type" : "image/png",
+      "size" : 457528
+    }, {
+      "uid" : "46452cf2abdb9707",
+      "name" : "search_map_detail",
+      "source" : "46452cf2abdb9707.png",
+      "type" : "image/png",
+      "size" : 1410516
+    }, {
+      "uid" : "21051239f00c0315",
+      "name" : "search_map_console",
+      "source" : "21051239f00c0315.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Mobile Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ac090afc747d4b6e.json",
+  "parameterValues" : [ ]
+}

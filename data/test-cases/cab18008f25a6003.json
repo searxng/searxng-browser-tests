@@ -1,0 +1,70 @@
+{
+  "uid" : "cab18008f25a6003",
+  "name" : "search_code",
+  "fullName" : "search_code",
+  "historyId" : "Webkit 1920 searxng.spec.js search_code",
+  "time" : {
+    "start" : 1659073404830,
+    "stop" : 1659073406945,
+    "duration" : 2115
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b3a0dfdc6a6525fa",
+      "name" : "search_code",
+      "source" : "b3a0dfdc6a6525fa.png",
+      "type" : "image/png",
+      "size" : 424010
+    }, {
+      "uid" : "7bb7f88bdcc7bc82",
+      "name" : "search_code_console",
+      "source" : "7bb7f88bdcc7bc82.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Webkit 1920"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cab18008f25a6003.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,76 @@
+{
+  "uid" : "a297b37e7ace621c",
+  "name" : "search_videos",
+  "fullName" : "search_videos",
+  "historyId" : "Mobile Chrome - centered - rtl searxng.spec.js search_videos",
+  "time" : {
+    "start" : 1659073248502,
+    "stop" : 1659073254506,
+    "duration" : 6004
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "d590bede48f9f845",
+      "name" : "search_videos",
+      "source" : "d590bede48f9f845.png",
+      "type" : "image/png",
+      "size" : 324134
+    }, {
+      "uid" : "7d0ed5f205babc7f",
+      "name" : "search_videos_player",
+      "source" : "7d0ed5f205babc7f.png",
+      "type" : "image/png",
+      "size" : 378164
+    }, {
+      "uid" : "d560698490a22463",
+      "name" : "search_videos_console",
+      "source" : "d560698490a22463.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Mobile Chrome - centered - rtl"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a297b37e7ace621c.json",
+  "parameterValues" : [ ]
+}

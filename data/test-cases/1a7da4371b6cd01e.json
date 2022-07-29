@@ -1,0 +1,100 @@
+{
+  "uid" : "1a7da4371b6cd01e",
+  "name" : "preferences",
+  "fullName" : "preferences",
+  "historyId" : "Firefox 1920 - no js searxng.spec.js preferences",
+  "time" : {
+    "start" : 1659073291154,
+    "stop" : 1659073294118,
+    "duration" : 2964
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "cdcb3c971229d972",
+      "name" : "preferences-General",
+      "source" : "cdcb3c971229d972.png",
+      "type" : "image/png",
+      "size" : 136768
+    }, {
+      "uid" : "444e9aed338097f7",
+      "name" : "preferences-User interface",
+      "source" : "444e9aed338097f7.png",
+      "type" : "image/png",
+      "size" : 141400
+    }, {
+      "uid" : "c03c5cca5e9fbd9b",
+      "name" : "preferences-Privacy",
+      "source" : "c03c5cca5e9fbd9b.png",
+      "type" : "image/png",
+      "size" : 115163
+    }, {
+      "uid" : "ba3a826fd631f6df",
+      "name" : "preferences-Engines",
+      "source" : "ba3a826fd631f6df.png",
+      "type" : "image/png",
+      "size" : 124771
+    }, {
+      "uid" : "29ed084de030eae5",
+      "name" : "preferences-Special Queries",
+      "source" : "29ed084de030eae5.png",
+      "type" : "image/png",
+      "size" : 153110
+    }, {
+      "uid" : "6d5c97e25d1e0d49",
+      "name" : "preferences-Cookies",
+      "source" : "6d5c97e25d1e0d49.png",
+      "type" : "image/png",
+      "size" : 146703
+    }, {
+      "uid" : "6f29038ba820eed8",
+      "name" : "preferences_console",
+      "source" : "6f29038ba820eed8.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 7,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Firefox 1920 - no js"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1a7da4371b6cd01e.json",
+  "parameterValues" : [ ]
+}

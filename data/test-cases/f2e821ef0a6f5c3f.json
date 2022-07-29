@@ -1,0 +1,76 @@
+{
+  "uid" : "f2e821ef0a6f5c3f",
+  "name" : "search_images",
+  "fullName" : "search_images",
+  "historyId" : "Webkit 1920 searxng.spec.js search_images",
+  "time" : {
+    "start" : 1659073384033,
+    "stop" : 1659073390866,
+    "duration" : 6833
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b05a7162191cff32",
+      "name" : "search_images",
+      "source" : "b05a7162191cff32.png",
+      "type" : "image/png",
+      "size" : 1922314
+    }, {
+      "uid" : "6ee0ea2ce9714550",
+      "name" : "search_images_detail",
+      "source" : "6ee0ea2ce9714550.png",
+      "type" : "image/png",
+      "size" : 1649524
+    }, {
+      "uid" : "f94529ccc32ebaae",
+      "name" : "search_images_console",
+      "source" : "f94529ccc32ebaae.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Webkit 1920"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f2e821ef0a6f5c3f.json",
+  "parameterValues" : [ ]
+}

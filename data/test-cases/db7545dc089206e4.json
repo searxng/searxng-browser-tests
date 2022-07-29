@@ -1,0 +1,76 @@
+{
+  "uid" : "db7545dc089206e4",
+  "name" : "search_general",
+  "fullName" : "search_general",
+  "historyId" : "Mobile Chrome - centered searxng.spec.js search_general",
+  "time" : {
+    "start" : 1659073210537,
+    "stop" : 1659073212971,
+    "duration" : 2434
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "fbf1d39c7c274480",
+      "name" : "search_general",
+      "source" : "fbf1d39c7c274480.png",
+      "type" : "image/png",
+      "size" : 793807
+    }, {
+      "uid" : "b8677e100149228e",
+      "name" : "search_general_2",
+      "source" : "b8677e100149228e.png",
+      "type" : "image/png",
+      "size" : 355117
+    }, {
+      "uid" : "6ca0864b32be85d3",
+      "name" : "search_general_console",
+      "source" : "6ca0864b32be85d3.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Mobile Chrome - centered"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "db7545dc089206e4.json",
+  "parameterValues" : [ ]
+}

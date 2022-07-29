@@ -1,0 +1,76 @@
+{
+  "uid" : "ab6b696608155e14",
+  "name" : "search_map",
+  "fullName" : "search_map",
+  "historyId" : "Firefox 1920 - dark mode searxng.spec.js search_map",
+  "time" : {
+    "start" : 1659073331630,
+    "stop" : 1659073336661,
+    "duration" : 5031
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "bb44f1ad3a6ed829",
+      "name" : "search_map",
+      "source" : "bb44f1ad3a6ed829.png",
+      "type" : "image/png",
+      "size" : 227005
+    }, {
+      "uid" : "92982462cd6db3ed",
+      "name" : "search_map_detail",
+      "source" : "92982462cd6db3ed.png",
+      "type" : "image/png",
+      "size" : 523829
+    }, {
+      "uid" : "47aadd4cb2106d19",
+      "name" : "search_map_console",
+      "source" : "47aadd4cb2106d19.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Firefox 1920 - dark mode"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ab6b696608155e14.json",
+  "parameterValues" : [ ]
+}

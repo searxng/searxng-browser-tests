@@ -1,0 +1,76 @@
+{
+  "uid" : "db01be6bcaeae653",
+  "name" : "search_general",
+  "fullName" : "search_general",
+  "historyId" : "Firefox 1024 - centered searxng.spec.js search_general",
+  "time" : {
+    "start" : 1659073155199,
+    "stop" : 1659073157292,
+    "duration" : 2093
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "9de4d774386206b7",
+      "name" : "search_general",
+      "source" : "9de4d774386206b7.png",
+      "type" : "image/png",
+      "size" : 197024
+    }, {
+      "uid" : "74341bf27444bc87",
+      "name" : "search_general_2",
+      "source" : "74341bf27444bc87.png",
+      "type" : "image/png",
+      "size" : 128457
+    }, {
+      "uid" : "20ea214f6dc454c",
+      "name" : "search_general_console",
+      "source" : "20ea214f6dc454c.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Firefox 1024 - centered"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "db01be6bcaeae653.json",
+  "parameterValues" : [ ]
+}

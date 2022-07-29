@@ -1,0 +1,100 @@
+{
+  "uid" : "2dbae4d58d9798aa",
+  "name" : "preferences",
+  "fullName" : "preferences",
+  "historyId" : "Mobile Safari searxng.spec.js preferences",
+  "time" : {
+    "start" : 1659073434556,
+    "stop" : 1659073437545,
+    "duration" : 2989
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "6ecbdf2b7c5ea285",
+      "name" : "preferences-General",
+      "source" : "6ecbdf2b7c5ea285.png",
+      "type" : "image/png",
+      "size" : 133263
+    }, {
+      "uid" : "7147269aee736e98",
+      "name" : "preferences-User interface",
+      "source" : "7147269aee736e98.png",
+      "type" : "image/png",
+      "size" : 114590
+    }, {
+      "uid" : "6be1255e8b4f28ec",
+      "name" : "preferences-Privacy",
+      "source" : "6be1255e8b4f28ec.png",
+      "type" : "image/png",
+      "size" : 136723
+    }, {
+      "uid" : "f294c4f231b40ed",
+      "name" : "preferences-Engines",
+      "source" : "f294c4f231b40ed.png",
+      "type" : "image/png",
+      "size" : 101053
+    }, {
+      "uid" : "bb2011f618669836",
+      "name" : "preferences-Special Queries",
+      "source" : "bb2011f618669836.png",
+      "type" : "image/png",
+      "size" : 115069
+    }, {
+      "uid" : "1ab9608658ba70b0",
+      "name" : "preferences-Cookies",
+      "source" : "1ab9608658ba70b0.png",
+      "type" : "image/png",
+      "size" : 169709
+    }, {
+      "uid" : "cc0baaefe5507302",
+      "name" : "preferences_console",
+      "source" : "cc0baaefe5507302.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 7,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Mobile Safari"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2dbae4d58d9798aa.json",
+  "parameterValues" : [ ]
+}

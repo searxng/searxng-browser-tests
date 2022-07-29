@@ -1,0 +1,76 @@
+{
+  "uid" : "501485b265265813",
+  "name" : "search_videos",
+  "fullName" : "search_videos",
+  "historyId" : "Mobile Safari searxng.spec.js search_videos",
+  "time" : {
+    "start" : 1659073449024,
+    "stop" : 1659073455426,
+    "duration" : 6402
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a43b79eccac56ec4",
+      "name" : "search_videos",
+      "source" : "a43b79eccac56ec4.png",
+      "type" : "image/png",
+      "size" : 275767
+    }, {
+      "uid" : "f8223740f8c4c50",
+      "name" : "search_videos_player",
+      "source" : "f8223740f8c4c50.png",
+      "type" : "image/png",
+      "size" : 275030
+    }, {
+      "uid" : "a0f3d7e4b238f620",
+      "name" : "search_videos_console",
+      "source" : "a0f3d7e4b238f620.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Mobile Safari"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "501485b265265813.json",
+  "parameterValues" : [ ]
+}

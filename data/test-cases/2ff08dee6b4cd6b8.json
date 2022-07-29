@@ -1,0 +1,76 @@
+{
+  "uid" : "2ff08dee6b4cd6b8",
+  "name" : "index",
+  "fullName" : "index",
+  "historyId" : "Chromium 1920 searxng.spec.js index",
+  "time" : {
+    "start" : 1659073029656,
+    "stop" : 1659073033693,
+    "duration" : 4037
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "bfa7fda76130f5ea",
+      "name" : "index",
+      "source" : "bfa7fda76130f5ea.png",
+      "type" : "image/png",
+      "size" : 45485
+    }, {
+      "uid" : "eb37f82c2ff6a23",
+      "name" : "index_autocomplete",
+      "source" : "eb37f82c2ff6a23.png",
+      "type" : "image/png",
+      "size" : 44656
+    }, {
+      "uid" : "1e9898ae171d8bda",
+      "name" : "index_console",
+      "source" : "1e9898ae171d8bda.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Chromium 1920"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2ff08dee6b4cd6b8.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,76 @@
+{
+  "uid" : "93557d97ab28c055",
+  "name" : "index",
+  "fullName" : "index",
+  "historyId" : "Firefox 1024 - centered searxng.spec.js index",
+  "time" : {
+    "start" : 1659073151205,
+    "stop" : 1659073155198,
+    "duration" : 3993
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "817300916c07bb60",
+      "name" : "index",
+      "source" : "817300916c07bb60.png",
+      "type" : "image/png",
+      "size" : 55771
+    }, {
+      "uid" : "ab079cfa762e0d17",
+      "name" : "index_autocomplete",
+      "source" : "ab079cfa762e0d17.png",
+      "type" : "image/png",
+      "size" : 55002
+    }, {
+      "uid" : "fe11957a5605480b",
+      "name" : "index_console",
+      "source" : "fe11957a5605480b.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Firefox 1024 - centered"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "93557d97ab28c055.json",
+  "parameterValues" : [ ]
+}

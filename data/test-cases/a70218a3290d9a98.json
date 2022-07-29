@@ -1,0 +1,70 @@
+{
+  "uid" : "a70218a3290d9a98",
+  "name" : "about",
+  "fullName" : "about",
+  "historyId" : "Mobile Safari searxng.spec.js about",
+  "time" : {
+    "start" : 1659073465134,
+    "stop" : 1659073465681,
+    "duration" : 547
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "49a781a8ba3c9e14",
+      "name" : "about",
+      "source" : "49a781a8ba3c9e14.png",
+      "type" : "image/png",
+      "size" : 295897
+    }, {
+      "uid" : "803f013aa74b5c45",
+      "name" : "about_console",
+      "source" : "803f013aa74b5c45.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Mobile Safari"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a70218a3290d9a98.json",
+  "parameterValues" : [ ]
+}

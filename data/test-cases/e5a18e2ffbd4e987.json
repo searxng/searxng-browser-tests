@@ -1,0 +1,76 @@
+{
+  "uid" : "e5a18e2ffbd4e987",
+  "name" : "search_general",
+  "fullName" : "search_general",
+  "historyId" : "Firefox 1920 - dark mode searxng.spec.js search_general",
+  "time" : {
+    "start" : 1659073318828,
+    "stop" : 1659073321037,
+    "duration" : 2209
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "65347a55577baca3",
+      "name" : "search_general",
+      "source" : "65347a55577baca3.png",
+      "type" : "image/png",
+      "size" : 469307
+    }, {
+      "uid" : "a883f82fdc53c0b6",
+      "name" : "search_general_2",
+      "source" : "a883f82fdc53c0b6.png",
+      "type" : "image/png",
+      "size" : 232979
+    }, {
+      "uid" : "a26743d0aa7bb229",
+      "name" : "search_general_console",
+      "source" : "a26743d0aa7bb229.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Firefox 1920 - dark mode"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e5a18e2ffbd4e987.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,100 @@
+{
+  "uid" : "72d2fc6b3a368316",
+  "name" : "preferences",
+  "fullName" : "preferences",
+  "historyId" : "Firefox 1920 - rtl searxng.spec.js preferences",
+  "time" : {
+    "start" : 1659073262622,
+    "stop" : 1659073265681,
+    "duration" : 3059
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "e7145040a04f778a",
+      "name" : "preferences-כללי",
+      "source" : "e7145040a04f778a.png",
+      "type" : "image/png",
+      "size" : 124165
+    }, {
+      "uid" : "826a263e03279d4e",
+      "name" : "preferences-ממשק משתמש",
+      "source" : "826a263e03279d4e.png",
+      "type" : "image/png",
+      "size" : 129259
+    }, {
+      "uid" : "15bc3a1b84f0ffb",
+      "name" : "preferences-פרטיות",
+      "source" : "15bc3a1b84f0ffb.png",
+      "type" : "image/png",
+      "size" : 107166
+    }, {
+      "uid" : "129ac2773da9163",
+      "name" : "preferences-מנועים",
+      "source" : "129ac2773da9163.png",
+      "type" : "image/png",
+      "size" : 115032
+    }, {
+      "uid" : "b40d8480bc5bd528",
+      "name" : "preferences-שאילתות מיוחדות",
+      "source" : "b40d8480bc5bd528.png",
+      "type" : "image/png",
+      "size" : 143263
+    }, {
+      "uid" : "4af976d6ff2572cd",
+      "name" : "preferences-עוגיות",
+      "source" : "4af976d6ff2572cd.png",
+      "type" : "image/png",
+      "size" : 138567
+    }, {
+      "uid" : "d57cf938a564d159",
+      "name" : "preferences_console",
+      "source" : "d57cf938a564d159.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 7,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Firefox 1920 - rtl"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "72d2fc6b3a368316.json",
+  "parameterValues" : [ ]
+}

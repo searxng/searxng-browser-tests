@@ -1,0 +1,76 @@
+{
+  "uid" : "cec759b7c9394c0",
+  "name" : "search_images",
+  "fullName" : "search_images",
+  "historyId" : "Chrome 1920 - high contrast searxng.spec.js search_images",
+  "time" : {
+    "start" : 1659073348352,
+    "stop" : 1659073352807,
+    "duration" : 4455
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "4274719d33d7dc34",
+      "name" : "search_images",
+      "source" : "4274719d33d7dc34.png",
+      "type" : "image/png",
+      "size" : 2127341
+    }, {
+      "uid" : "1785de479666a965",
+      "name" : "search_images_detail",
+      "source" : "1785de479666a965.png",
+      "type" : "image/png",
+      "size" : 1497142
+    }, {
+      "uid" : "5ea984b0ae325621",
+      "name" : "search_images_console",
+      "source" : "5ea984b0ae325621.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "JavaScript"
+  }, {
+    "name" : "framework",
+    "value" : "Playwright"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Chrome 1920 - high contrast"
+  }, {
+    "name" : "suite",
+    "value" : "searxng.spec.js"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cec759b7c9394c0.json",
+  "parameterValues" : [ ]
+}
