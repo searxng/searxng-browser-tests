@@ -12,7 +12,7 @@
   "author": "SearXNG team",
   "license": "AGPL3",
   "devDependencies": {
-    "@playwright/test": "^1.31.1",
+    "@playwright/test": "^1.32.1",
     "allure-commandline": "^2.20.1",
     "axe-playwright": "^1.1.12",
     "experimental-allure-playwright": "^0.0.3"
