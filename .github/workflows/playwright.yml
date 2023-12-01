@@ -20,6 +20,7 @@ jobs:
       run: npm run install
     - name: Run Playwright tests
       run: npm run test
+      if: always()
     - name: Generate report
       run: |
         npm run report
