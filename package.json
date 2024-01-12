@@ -14,7 +14,7 @@
   "devDependencies": {
     "@playwright/test": "^1.40.0",
     "allure-commandline": "^2.24.1",
-    "axe-playwright": "^1.1.12",
+    "axe-playwright": "^2.0.1",
     "experimental-allure-playwright": "^0.0.3"
   },
   "dependencies": {
