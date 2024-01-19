@@ -13,7 +13,7 @@
   "license": "AGPL3",
   "devDependencies": {
     "@playwright/test": "^1.40.0",
-    "allure-commandline": "^2.24.1",
+    "allure-commandline": "^2.26.0",
     "axe-playwright": "^1.1.12",
     "experimental-allure-playwright": "^0.0.3"
   },
