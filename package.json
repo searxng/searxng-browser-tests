@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "allure": "^0.0.0",
-    "allure-playwright": "^2.9.2"
+    "allure-playwright": "^2.11.1"
   }
 }
