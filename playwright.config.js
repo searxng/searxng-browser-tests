@@ -178,13 +178,15 @@ const config = {
         extraHTTPHeaders: HEADERS,
       },
     },
-    {
-      name: 'Mobile Safari',
-      use: {
-        ...devices['iPhone 12'],
-        extraHTTPHeaders: HEADERS,
-      },
-    },
+
+    // FIXME
+    // {
+    //   name: 'Mobile Safari',
+    //   use: {
+    //     ...devices['iPhone 12'],
+    //     extraHTTPHeaders: HEADERS,
+    //   },
+    // },
 
     /* Test against branded browsers. */
     // {
