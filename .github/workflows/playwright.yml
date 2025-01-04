@@ -8,7 +8,7 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: start SearXNG
       run: docker run --rm -d -p 8888:8080 searxng/searxng
     - uses: actions/setup-node@v4
@@ -20,13 +20,12 @@ jobs:
       run: npm run install
     - name: Run Playwright tests
       run: npm run test
-      if: always()
     - name: Generate report
       run: |
         npm run report
         echo "dev.searxng.org" > allure-report/CNAME
     - name: Deploy to the report branch
-      uses: JamesIves/github-pages-deploy-action@v4.3.3
+      uses: JamesIves/github-pages-deploy-action@v4.7.2
       with:
         branch: report
         folder: allure-report
