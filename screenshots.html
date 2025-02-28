@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SearXNG - Screenshots</title>
+    <link rel="icon" href="favicon.png" sizes="any">
+    <meta name="description" content="Screenshots of SearXNG, weekly updated">
+    <script type='application/ld+json'> 
+        {
+          "@context": "http://www.schema.org",
+          "@type": "WebSite",
+          "name": "SearXNG - Screenshots",
+          "url": "https://dev.searxng.org/screenshots.html"
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+            font-family: sans-serif;
+        }
+    
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: rgb(233, 233, 233);
+            box-shadow: 0 2px 2px -1px #666;
+        }
+
+        nav > * {
+            width: 20rem;
+            display: block;
+            margin: 0 1rem;
+        }
+
+        nav select:focus {
+            outline: none;
+            box-shadow: blue 0 0 3px;
+        }
+
+        nav .external_links {
+            position: absolute;
+            right: 1rem;
+            width: auto;
+        }
+
+        main {
+            padding: 4rem 0 100vh 0;
+            display: grid;
+            object-fit: contain;
+        }
+
+        main .imgcontainer {
+            display: flex;
+            height: calc(100vh - 5rem);
+            width: 100%;
+            margin: 0 auto 1rem auto;
+        }
+
+        main .imgcontainer img {
+            margin: 0 auto;
+            outline: 1px solid black;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: calc(100vh - 5rem);
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+            body main .imgcontainer {
+                height: auto;
+            }
+
+            body main .imgcontainer img {
+                max-height: auto;
+            }
+        }
+    </style>
+</head>
+<body x-data="fetch_data()" x-init="init()">
+    <nav>
+        <div>
+            <label for="selected_config">Browser</label>
+            <select id="selected_config" x-model="selected_config" @change="update_hash($data)">
+                <template x-for="config in config_list">
+                    <option x-text="config"></option>
+                </template>
+            </select>
+        </div>
+        <div>
+            <label for="selected_test_case">Test case</label>
+            <select name="selected_test_case" x-model="selected_test_case" @change="update_hash($data)">
+                <template x-for="test_case in test_case_list">
+                    <option x-text="test_case"></option>
+                </template>
+            </select>
+        </div>
+        <div class="external_links">
+            <a href="https://github.com/searxng/searxng-browser-tests">Source code</a>
+        </div>
+    </nav>
+    <main>
+        <template x-for="attachments in all_attachments">
+            <template x-if="attachments.config === selected_config && attachments.test_case === selected_test_case">
+                <template x-for="one_attachment in attachments.attachments">
+                    <template x-if="one_attachment.type === 'image/png'">
+                        <div class="imgcontainer">
+                            <img x-bind:src="'data/attachments/' + one_attachment.source"></img>
+                        </div>
+                    </template>
+                </template>
+            </template>
+        </template>
+    </main>
+    <script>
+        const default_config_order = [
+            'Firefox 1024', 'Firefox 1280', 'Firefox 1920',
+            'Chromium 1920', 'Webkit 1920',
+            'Firefox 1920 - rtl', 'Firefox 1920 - no js', 'Firefox 1920 - dark mode', 'Chrome 1920 - high contrast',
+            'Mobile Chrome', 'Mobile Safari',
+            'Firefox 1024 - centered', 'Firefox 1024 - centered - rtl', 'Mobile Chrome - centered', 'Mobile Chrome - centered - rtl',
+        ];
+
+        const default_config = 'Firefox 1920';
+        const default_test_case = 'search_general';
+
+        function update_hash(data) {
+            const new_hash = '#' + new URLSearchParams({
+                config: data.selected_config,
+                test_case: data.selected_test_case,
+            }).toString();
+            history.replaceState(null, null, new_hash);
+            document.title =  'SearXNG - Screenshots - ' + data.selected_config + ' - ' + data.selected_test_case;
+        }
+
+        function fetch_data() {
+
+            function update_selection_from_hash() {
+                const params = new URLSearchParams(location.hash.substring(1));
+                if (params.get('config')) {
+                    this.selected_config = params.get('config');
+                } else {
+                    this.selected_config = default_config;
+                }
+                if (params.get('test_case')) {
+                    this.selected_test_case = params.get('test_case');
+                } else {
+                    this.selected_test_case = default_test_case;
+                }
+            }
+
+            async function init() {
+                const response = await fetch('data/all_attachments.json');
+                const raw_data = await response.json();
+                const config_list = [];
+                const test_case_list = [];
+                const all_attachments = [];
+                for(const attachments of raw_data) {
+                    all_attachments.push(attachments);
+                    if (!config_list.includes(attachments.config)) {
+                        config_list.push(attachments.config);
+                    }
+                    if (!test_case_list.includes(attachments.test_case)) {
+                        test_case_list.push(attachments.test_case);
+                    }
+                }
+                test_case_list.sort();
+                config_list.sort(function (a,b){
+                    const ia = default_config_order.indexOf(a);
+                    const ib = default_config_order.indexOf(b);
+                    if (ia === -1 && ib === -1) {
+                        return a < b;
+                    }
+                    if (ia === -1) {
+                        return 1;
+                    }
+                    if (ib === -1) {
+                        return -1;
+                    }
+                    return ia - ib;
+                });
+                this.all_attachments = all_attachments;
+                this.config_list = config_list;
+                this.test_case_list = test_case_list;
+
+                const usfh = update_selection_from_hash.bind(this);    
+                usfh();
+                window.onhashchange = usfh;
+                update_hash(this);
+            }
+            return {
+                all_attachments: [],
+                config_list: [],
+                test_case_list: [],
+                selected_config: '',
+                selected_test_case: '',
+                init: init,
+            };
+        }
+    </script>
+    <script src="alpinejs.js" defer></script>
+</body>
+</html>
